@@ -1,0 +1,101 @@
+h3{
+  color: rgb(30, 74, 205); /*Color name,  RGB value, HEX value */
+  background-color: rgb(233, 223, 216);
+  text-align: center;  /* left, right, center */
+  text-decoration-line: underline;  /*overline, line-through, underline */
+  text-decoration-color: red;
+  text-decoration-style: wavy; /*solid, dashed, dotted, double, wavy*/
+  text-decoration-thickness: 1px;
+  text-transform: capitalize; /*lowercase, uppercase, capitalize*/
+  letter-spacing: 10px;
+  font-style: italic;
+}
+
+h2{
+  font-size: 50px; /*measurement value*/
+  color: darkcyan;
+  font-family: "Playwrite NZ", cursive;
+}
+
+label{
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+
+p{
+  text-indent: 200px; /*measurement value*/
+  letter-spacing: 5px;
+  line-height: 2.5; /*measurment in decimal value */
+  word-spacing: 10px;
+}
+
+.list-heading{
+  font-size: 50px;
+  color: blueviolet;
+  font-style: italic;
+}
+
+.para{
+  background-color: aqua;
+  font-family: "Playwrite NZ", cursive;
+}
+
+.square{
+ width: 200px;
+ height: 200px;
+ background-color: brown; 
+}
+
+.rectangle{
+  width: 400px;
+  height: 200px;
+  background-color: blueviolet;
+}
+
+.circle{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 100px;
+}
+
+.ellipse{
+  width: 200px;
+  height: 100px;
+  background-color: green;
+}
+
+.square-relative{
+  width: 25vw;   
+  height: 25vw;
+  background-color: darkblue;
+}
+
+/* (VW) - Go and mesase the browser window width, it will take the px value (ex. 1000px)
+50vw -- It will take 1/2 of the browser width -- 500px */
+
+.rectangle-relative{
+  width: 50vw;
+  height: 25vh;
+  background-color: aqua;
+}
+
+.circle-relative{
+  width: 50vw;
+  height: 50vw;
+  background-color: red;
+  border-radius: 25vw;
+}
+
+.ellipse-relative{
+  width: 50vw;
+  height: 25vh;
+  background-color: chartreuse;
+  border-radius: 10vw;
+}
+
+.main-body{
+  /* background-image: url("./shinchan.png"); */
+  background-image: url("https://t3.ftcdn.net/jpg/05/44/57/08/360_F_544570824_2s40WLkrfmBAkPLFngFaO9aSctPTvUIi.jpg");
+}

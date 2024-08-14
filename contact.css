@@ -1,0 +1,51 @@
+.text{
+    font-family: "Ga Maamli", sans-serif;
+    font-size: 40px;
+}
+
+.absolute-square{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
+
+.absolute-rectangle{
+    width: 400px;
+    height: 200px;
+    background-color: rgb(162, 153, 153);
+    overflow: auto;
+}
+
+.absolute-circle{
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+    border-radius: 100px;
+}
+
+.relative-square{
+    width: 50vw;
+    height: 50vw;
+    background-color: aqua;
+}
+
+.relative-rectangle{
+    width: 50vw;
+    height: 25vh;
+    background-color: cornflowerblue;
+}
+
+.relative-circle{
+    width: 50vw;
+    height: 50vw;
+    background-color: blue;
+    border-radius: 50vw;
+}
+
+.box-model{
+    border-bottom-width: 8px;
+    border-style: solid;
+    border-color: blueviolet;
+    border-bottom-color: blue;
+    /* border-bottom: 4px double red;*/
+}
