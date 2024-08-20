@@ -102,3 +102,51 @@ var studentDetailList = [
 
 console.log(nameList);
 console.log(studentDetailList);
+
+/*
+Function Syntax:
+Part 1 - Function Definition 
+Type inisde javascript File
+
+function functionName(){
+    -- code logic
+}
+
+function - keyword used to defined a block
+functionName - It should be a meaningful name, It should be unique, A-Z, a-z, 0-9, _, $
+
+Part 2 - Function Execution 
+Type inside HTML file
+
+onclick="functionName()"
+*/
+
+function printWelcomeMessage(){
+    var message = "Hello! Good Day";
+    alert(message);
+}
+
+function goodbyeMessage(){
+    var message = "Thank you! Bye";
+    alert(message);
+}
+
+/*
+Different ways Input can be given by User to Program:
+1. Typing the Input direclty into to the Code  -- Static 
+2. prompt() -- Dynamic
+3. using HTML Forms -- Dynamic
+*/
+
+function dynamicOutput(){
+    var input = prompt("Enter you Name");
+    alert(input);
+}
+
+/*
+Operators in Javascript
+1. Arithmetic Operator +, -, *, /, %, ++, --
+2. Assingment Operator =
+3. Comparaison Operator < (less than), <= , > (greater than), >= , == , != , === , !==
+4. Logical Operator && (AND), || (OR), ! (NOT)
+*/
