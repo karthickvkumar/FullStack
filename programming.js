@@ -145,8 +145,115 @@ function dynamicOutput(){
 
 /*
 Operators in Javascript
-1. Arithmetic Operator +, -, *, /, %, ++, --
+1. Arithmetic Operator +, -, *, /, %, ++ (incremenmt Operator), -- (decrement operator)
 2. Assingment Operator =
 3. Comparaison Operator < (less than), <= , > (greater than), >= , == , != , === , !==
 4. Logical Operator && (AND), || (OR), ! (NOT)
+
+AND (&&)
+condition 1 (true) && condition 2 (true) -- Combined output (true)
+condition 1 (true) && condition 2 (false) -- Combined output (false)
+condition 1 (false) && condition 2 (true) -- Combined output (false)
+condition 1 (false) && condition 2 (false) -- Combined output (false)
+
+OR (||)
+condition 1 (true) || condition 2 (true) -- Combined output (true)
+condition 1 (true) || condition 2 (false) -- Combined output (true)
+condition 1 (false) || condition 2 (true) -- Combined output (true)
+condition 1 (false) || condition 2 (false) -- Combined output (false)
+
+NOT (!)
+! condition (true)  --- Output (false)
+! condition (false)  --- Output (true)
+
 */
+
+/*
+Flow Control 
+1. IF ELSE Condition 
+syntax: 
+
+if(condition){
+  -- If the condition (true) -- If Block -- Will execute 
+}
+else{
+  -- If the condition (false) -- Else  Block -- Will execute
+}
+*/
+
+/*
+Problem: To find a given User Age is Eligible from Vote in US 
+Statement: 
+1. Read input (user age)
+2. Process the Input (comparing the Input - greater than or equal to 18)
+3. Output 
+    1) If the comparision (true) -- The user is eligible to Vote 
+    2) If the comparision (false) -- The user is Not eligible to Vote
+*/
+
+function CheckVotingEligiblity(){
+    var age = prompt("Enter the Person Age");
+    if(age >= 18){
+        alert("The user is eligible to Vote");
+    }
+    else{
+        alert("The user is Not eligible to Vote");
+    }
+}
+
+/*
+2. Multiple IF Else Condition 
+syntax:
+
+if(Condition 1){
+
+}
+else if(Condition 2){
+
+}
+else if(Condition 3){
+
+}
+else{
+
+}
+
+Problem: Find the Ticket discount percentage and category based on Person Age 
+category: 
+1) Less than or equal to 3 -- Kids, 50% of Ticket discount in fair
+2) Greater than 3 and less than 60 -- Adult, 100% of Ticket fair 
+3) Greater than or equal to 60 -- Senior, 75% of Ticket discount in fair
+*/
+
+function CheckTicketDiscount(){
+    var age = prompt("Enter the Person Age");
+    if(age <= 3){
+        alert("Kids, 50% of Ticket discount in fair");
+    }
+    else if(age > 3 && age < 60){
+        alert("Adult, 100% of Ticket fair ");
+    }
+    else if(age >= 60){
+        alert("Senior, 75% of Ticket discount in fair");
+    }
+    else{
+        alert("Type only Numeric value");
+    }
+}
+
+/*
+Loop - To run a block of code to N number of times 
+syntax:
+
+for(initialization; condition; increment/decrement){
+ -- code block that needs to be run multiple time
+}
+
+initialization - Starting point of a Loop
+condition - Ending point of a Loop 
+increment/decrement - continue the loop
+*/
+
+for(var count = 1; count < 10; count++){ 
+    console.log("The loop is running for", count);
+}
