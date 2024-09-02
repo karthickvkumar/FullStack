@@ -254,6 +254,78 @@ condition - Ending point of a Loop
 increment/decrement - continue the loop
 */
 
-for(var count = 1; count < 10; count++){ 
+for(var count = 1; count < 20; count++){ 
     console.log("The loop is running for", count);
+}
+
+/*
+Problem: To find all even numbers for the given number of limit 
+1. Input - Number value 
+2. Processing : Come with logic for the Problem 
+   Number % 2 == Remainder - 0 == Even Number 
+3. Output 
+*/
+
+function findingEvenNumber(){
+    var lastNumber = prompt("Enter the Last Number");
+    for(var count = 0; count <= lastNumber; count++){
+        var remainder = count % 2;
+        if(remainder == 0){
+            console.log(count, "is a Even Number")
+        }
+    }
+}
+
+/*
+Switch Case - Similar to multiple if else condition 
+syntax:
+
+switch(expression){
+    case value: 
+        code logic 
+        break;
+    case value:
+        code logic 
+        break;
+    . 
+    .
+    default:
+        code logic  
+}
+
+expression - The raw actual value 
+*/
+
+/*
+Problem - To perform basic arithmetic operation 
+Input - 3 (number1, mathemical operator, number2)
+Processing - process the 2 numbers based on given mathemical operator
+Output - show result of mathemical operation 
+*/
+
+function basicCalculator(){
+    var firstNumber = prompt("Enter the First Number");
+    var operator = prompt("Enter any one operator +, -, *, /");
+    var secondNumber = prompt("Enter the Second Number");
+
+    switch(operator){
+        case "+":
+           var result = firstNumber + secondNumber;
+           alert(result);
+           break;
+        case "-":
+            var result = firstNumber - secondNumber;
+            alert(result);
+            break;
+        case "*":
+            var result = firstNumber * secondNumber;
+            alert(result);
+            break;
+        case "/":
+            var result = firstNumber / secondNumber;
+            alert(result);
+            break;
+        default:
+            alert("Please enter only valid operator");
+    }
 }
