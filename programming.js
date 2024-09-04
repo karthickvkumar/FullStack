@@ -121,14 +121,22 @@ Type inside HTML file
 onclick="functionName()"
 */
 
+var importantMessage = "!!Flash News!!";  /// Global Scope Variable -- It can be used inside any Function limit
+
+var importantAnnouncemnt; 
+
 function printWelcomeMessage(){
-    var message = "Hello! Good Day";
+    var message = "Hello! Good Day";  /// Local Scope Variable -- It can be used only with in that function limit
+    importantAnnouncemnt = "Welcome Everyone...";  /// Automatic Global
     alert(message);
+    alert(importantMessage);
 }
 
 function goodbyeMessage(){
     var message = "Thank you! Bye";
     alert(message);
+    alert(importantMessage);
+    alert(importantAnnouncemnt);
 }
 
 /*
@@ -304,28 +312,73 @@ Output - show result of mathemical operation
 */
 
 function basicCalculator(){
-    var firstNumber = prompt("Enter the First Number");
-    var operator = prompt("Enter any one operator +, -, *, /");
-    var secondNumber = prompt("Enter the Second Number");
+    try{
+        var stingFormatedFirstNumber = prompt("Enter the First Number");
+        var firstNumber = parseInt(stingFormatedFirstNumber);
+        var operator = prompt("Enter any one operator +, -, *, /");
+        var stringFormatedSecondNumber = prompt("Enter the Second Number");
+        var secondNumber = parseInt(stringFormatedSecondNumber);
 
-    switch(operator){
-        case "+":
-           var result = firstNumber + secondNumber;
-           alert(result);
-           break;
-        case "-":
-            var result = firstNumber - secondNumber;
+        switch(operator){
+            case "+":
+            var result = firstNumber + secondNumber;
             alert(result);
             break;
-        case "*":
-            var result = firstNumber * secondNumber;
-            alert(result);
-            break;
-        case "/":
-            var result = firstNumber / secondNumber;
-            alert(result);
-            break;
-        default:
-            alert("Please enter only valid operator");
+            case "-":
+                var result = firstNumber - secondNumber;
+                alert(result);
+                break;
+            case "*":
+                var result = firstNumber * secondNumber;
+                alert(result);
+                break;
+            case "/":
+                var result = firstNumber / secondNumber;
+                alert(result);
+                break;
+            default:
+                alert("Please enter only valid operator");
+        }
     }
+    catch(exception){
+        alert("Something went wrong pls contact the Admin of site");
+    }
+    
 }
+
+/*
+Error - Mistake in the program 
+Exception Handling or Debugging - To solve the error in tha program 
+
+Types of Error
+1. Syntax Error - Mistake in the program syntax (Using incorrect syntax in code)
+2. Run Time Error - Mistake inside the code block(incorrect syntax, incorrect spelling)
+3. Logical Error - Mistake in the program logic (no red line, expected output will be incorrect)
+
+
+Exception Handling / Error Handling (Runtime error)
+syntax:
+
+try{
+
+}
+catch(exception){
+
+}
+
+Debugging - Pausing the code exection line by line
+*/
+
+/*
+Parse Int Method → It will return a String into Whole number
+var actualNumber = parseInt("20");
+actualNumber -- 20
+*/
+
+/*
+Scope - It provides a way to access the variable
+Three different types of Scopes:
+1. Local Scope - Variable that are created inside a function can be accessable only with in the Function level
+2. Global Scope - Variable that are created outside of a function can be accessable with in any Function level 
+3. Automatic Global Scope - Variable will be created outside of a function but its value will be assinged inside a function | It can be accessable with in any function level
+*/
