@@ -382,3 +382,77 @@ Three different types of Scopes:
 2. Global Scope - Variable that are created outside of a function can be accessable with in any Function level 
 3. Automatic Global Scope - Variable will be created outside of a function but its value will be assinged inside a function | It can be accessable with in any function level
 */
+
+/*
+Storage - Manually Storing a value into the Browser memory using javascript
+Local Storage - Once you stored something into the browser memory, it will be remains Permanently
+Session Storage - Once you stored something into the browser memory, it will be remains Temporary (Until the user is closing the browser tab)
+*/
+/*
+Local Storage:
+ - Permanent Storage 
+ - Max size of storage limit is inbetween 5MB to 13MB depends on browsers 
+
+ Synatax:
+ To store a value into local storage:
+
+ localStorage.setItem("key", value);
+ key - similar to variable name it should given in only string 
+ value - String, Number, Boolean | Object , Array (need to process before storing)
+
+To read a value from local storage:
+localStorage.getItem("key");
+
+To clear a Specific value / Entire value from local storage
+localStorage.removeItem("key");
+localStorage.clear();
+
+ */
+
+ function storeUserMessageLocal(){
+    var message = prompt("Enter your message");
+    localStorage.setItem("userMessage", message);
+    alert("Message has been stored");
+ }
+
+ function readLocalMessage(){
+    var message = localStorage.getItem("userMessage");
+    if(message != null){
+        alert(message);
+    }
+ }
+
+ function clearLocalStorage(){
+    localStorage.clear();
+ }
+
+/*
+Sesssion Storage:
+ - Temporary Storage 
+ - Max size of storage limit is inbetween 5MB to 13MB depends on browsers 
+
+ Synatax:
+ To store a value into session storage:
+
+sessionStorage.setItem("key", value);
+ key - similar to variable name it should given in only string 
+ value - String, Number, Boolean | Object , Array (need to process before storing)
+
+To read a value from session storage:
+sessionStorage.getItem("key");
+
+To clear a Specific value / Entire value from session storage
+sessionStorage.removeItem("key");
+sessionStorage.clear();
+
+ */
+
+function storeUserMessageSession(){
+    var message = prompt("Enter your message");
+    sessionStorage.setItem("userMessage", message);
+    alert("Message has been stored");
+ }
+
+
+
+ readLocalMessage(); // Function Invocation / Function Call
