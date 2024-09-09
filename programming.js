@@ -65,10 +65,10 @@ key - similar to Variable Name, it should be unique in a variable
 */
 
 var studentDetails = {
-    firstName : "mr.abc",
-    lastName : "xyz",
-    rollNumber : "2344ADC53534534534",
-    contatNumber : 987558268556
+    firstName: "mr.abc",
+    lastName: "xyz",
+    rollNumber: "2344ADC53534534534",
+    contatNumber: 987558268556
 };
 
 console.log(studentDetails);
@@ -87,16 +87,16 @@ var nameList = ["abc", "cde", "efg", "hij"];
 
 var studentDetailList = [
     {
-        firstName : "mr.abc",
-        lastName : "xyz",
-        rollNumber : "2344ADC53534534534",
-        contatNumber : 987558268556
+        firstName: "mr.abc",
+        lastName: "xyz",
+        rollNumber: "2344ADC53534534534",
+        contatNumber: 987558268556
     },
     {
-        firstName : "mr.wer",
-        lastName : "poi",
-        rollNumber : "434535343DEDDF5556",
-        contatNumber : 784555555
+        firstName: "mr.wer",
+        lastName: "poi",
+        rollNumber: "434535343DEDDF5556",
+        contatNumber: 784555555
     }
 ];
 
@@ -123,16 +123,16 @@ onclick="functionName()"
 
 var importantMessage = "!!Flash News!!";  /// Global Scope Variable -- It can be used inside any Function limit
 
-var importantAnnouncemnt; 
+var importantAnnouncemnt;
 
-function printWelcomeMessage(){
+function printWelcomeMessage() {
     var message = "Hello! Good Day";  /// Local Scope Variable -- It can be used only with in that function limit
     importantAnnouncemnt = "Welcome Everyone...";  /// Automatic Global
     alert(message);
     alert(importantMessage);
 }
 
-function goodbyeMessage(){
+function goodbyeMessage() {
     var message = "Thank you! Bye";
     alert(message);
     alert(importantMessage);
@@ -146,7 +146,7 @@ Different ways Input can be given by User to Program:
 3. using HTML Forms -- Dynamic
 */
 
-function dynamicOutput(){
+function dynamicOutput() {
     var input = prompt("Enter you Name");
     alert(input);
 }
@@ -199,12 +199,12 @@ Statement:
     2) If the comparision (false) -- The user is Not eligible to Vote
 */
 
-function CheckVotingEligiblity(){
+function CheckVotingEligiblity() {
     var age = prompt("Enter the Person Age");
-    if(age >= 18){
+    if (age >= 18) {
         alert("The user is eligible to Vote");
     }
-    else{
+    else {
         alert("The user is Not eligible to Vote");
     }
 }
@@ -233,18 +233,18 @@ category:
 3) Greater than or equal to 60 -- Senior, 75% of Ticket discount in fair
 */
 
-function CheckTicketDiscount(){
+function CheckTicketDiscount() {
     var age = prompt("Enter the Person Age");
-    if(age <= 3){
+    if (age <= 3) {
         alert("Kids, 50% of Ticket discount in fair");
     }
-    else if(age > 3 && age < 60){
+    else if (age > 3 && age < 60) {
         alert("Adult, 100% of Ticket fair ");
     }
-    else if(age >= 60){
+    else if (age >= 60) {
         alert("Senior, 75% of Ticket discount in fair");
     }
-    else{
+    else {
         alert("Type only Numeric value");
     }
 }
@@ -262,7 +262,7 @@ condition - Ending point of a Loop
 increment/decrement - continue the loop
 */
 
-for(var count = 1; count < 20; count++){ 
+for (var count = 1; count < 20; count++) {
     console.log("The loop is running for", count);
 }
 
@@ -274,11 +274,11 @@ Problem: To find all even numbers for the given number of limit
 3. Output 
 */
 
-function findingEvenNumber(){
+function findingEvenNumber() {
     var lastNumber = prompt("Enter the Last Number");
-    for(var count = 0; count <= lastNumber; count++){
+    for (var count = 0; count <= lastNumber; count++) {
         var remainder = count % 2;
-        if(remainder == 0){
+        if (remainder == 0) {
             console.log(count, "is a Even Number")
         }
     }
@@ -311,19 +311,19 @@ Processing - process the 2 numbers based on given mathemical operator
 Output - show result of mathemical operation 
 */
 
-function basicCalculator(){
-    try{
+function basicCalculator() {
+    try {
         var stingFormatedFirstNumber = prompt("Enter the First Number");
         var firstNumber = parseInt(stingFormatedFirstNumber);
         var operator = prompt("Enter any one operator +, -, *, /");
         var stringFormatedSecondNumber = prompt("Enter the Second Number");
         var secondNumber = parseInt(stringFormatedSecondNumber);
 
-        switch(operator){
+        switch (operator) {
             case "+":
-            var result = firstNumber + secondNumber;
-            alert(result);
-            break;
+                var result = firstNumber + secondNumber;
+                alert(result);
+                break;
             case "-":
                 var result = firstNumber - secondNumber;
                 alert(result);
@@ -340,10 +340,10 @@ function basicCalculator(){
                 alert("Please enter only valid operator");
         }
     }
-    catch(exception){
+    catch (exception) {
         alert("Something went wrong pls contact the Admin of site");
     }
-    
+
 }
 
 /*
@@ -409,22 +409,22 @@ localStorage.clear();
 
  */
 
- function storeUserMessageLocal(){
+function storeUserMessageLocal() {
     var message = prompt("Enter your message");
     localStorage.setItem("userMessage", message);
     alert("Message has been stored");
- }
+}
 
- function readLocalMessage(){
+function readLocalMessage() {
     var message = localStorage.getItem("userMessage");
-    if(message != null){
+    if (message != null) {
         alert(message);
     }
- }
+}
 
- function clearLocalStorage(){
+function clearLocalStorage() {
     localStorage.clear();
- }
+}
 
 /*
 Sesssion Storage:
@@ -447,12 +447,97 @@ sessionStorage.clear();
 
  */
 
-function storeUserMessageSession(){
+function storeUserMessageSession() {
     var message = prompt("Enter your message");
     sessionStorage.setItem("userMessage", message);
     alert("Message has been stored");
- }
+}
 
+function storeObject() {
+    var employeeDetails = {
+        name: "abc",
+        age: 30,
+        contact: "+78924525265",
+        location: "India"
+    };
 
+    // Object -> String Format Object -> Stored -> String Format Object -> Object 
 
- readLocalMessage(); // Function Invocation / Function Call
+    // RULE 
+    // #1 To store Object/Array into localStorage -- It should be converted into String value
+    // #2 To read an Already stored Object/Array from localStorage -- It should be coneverted back to Object/Array  
+
+    // To convert Object/Array into String 
+    // JSON.stringify(value);
+
+    var convertedDetails = JSON.stringify(employeeDetails);
+
+    localStorage.setItem("employeeDetails", convertedDetails);
+
+    var result = localStorage.getItem("employeeDetails");
+
+    // To restore String Format Object into Actual Object 
+    // JSON.parse(value)
+    var restoredValue = JSON.parse(result);
+    console.log(restoredValue);
+
+    alert("Object has been into local storage");
+}
+
+/*
+Timer - To run the code based on Time that we have given
+1) setTimeout - It will run a code after the given time (Run only one time while reloading the page)
+2) setInterval - It will run a code after the given time (Run repeatedly within the given time interval)
+
+syntax:
+
+setTimeout(function(){
+    code logic for delay execution
+}, timeInMilliSecond)
+
+Callback Function - Similar to a Function but it will not have Name 
+function(){
+
+}
+
+timeInMilliSecond - 1 second = 1000 milliSecond
+*/
+
+function delayWelcomeMessage() {
+    alert("Function has been Clicked");
+
+    setTimeout(function () {
+        var message = "Good Evening!"
+        alert(message);
+    }, 5000);
+}
+
+//readLocalMessage(); // Function Invocation / Function Call
+
+/*
+ setInterval
+ syntax:
+ setInterval(function(){
+
+ }, TimeInMilliSecond)
+ */
+var timer;
+
+function keepOnRunning() {
+    alert("Function has been Clicked");
+
+    timer = setInterval(function () {
+        var message = "Good Morning!"
+        alert(message);
+    }, 3000);
+}
+
+/*
+To stop the setInterval 
+syntax:
+clearInterval(timeID);
+*/
+
+function stopSetInterval(){
+    clearInterval(timer);
+}
