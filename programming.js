@@ -541,3 +541,130 @@ clearInterval(timeID);
 function stopSetInterval(){
     clearInterval(timer);
 }
+
+// Object
+var employee = {
+    name : "mr.abc",
+    age: 24,
+    city: "New York",
+    contact: "+17894683523"
+};
+
+console.log(employee)
+
+/*Operation in Object
+1. Read a particular value from Object 
+2. Modifying a particular value in Object
+3. Add a new value into Object
+4. Deleting a particular value from Object */
+
+/*To Read a particular value from Object 
+syntax:
+object_variableName.key */
+
+console.log(employee.city);
+
+/*Modifying a particular value in Object
+syntax:
+object_variableName.key = new Value; */
+
+employee.name = "John Smith";
+console.log(employee);
+
+/*Add a new value into Object
+syntax:
+object_variableName.newKey = value;*/
+
+employee.surname = "William";
+employee.bloodgroup = "B+";
+console.log(employee);
+
+/*Deleting a particular value from Object
+syntax:
+delete object_variableName.key;*/
+
+delete employee.contact;
+console.log(employee);
+
+Array 
+var employeeList = [
+    {
+        name : "absc",
+        id: 101
+    },
+    {
+        name : "decd",
+        id: 105
+    },
+    {
+        name : "osdf",
+        id: 107
+    }
+];
+console.log(employeeList);
+
+/*
+Operation in Array
+1. Read a particular value from Array 
+2. Modifying a particular value in Array
+3. Add a new value into Array
+4. Deleting a particular value from Array
+*/
+
+/*Read a particular value from Array
+syntax:
+array_variableName[index]; 
+
+1) If index is a known Value */
+
+console.log(employeeList[2])
+
+/*2) If index is unknown value 
+
+To find the index from that Array 
+var VariableName = array_variableName.findIndex(function(value){
+ return condition_to_match_value
+});
+*/
+var index = employeeList.findIndex(function(value){
+    return value.id === 105;
+});
+
+console.log(employeeList[index]);
+
+/*
+Modifying a particular value in Array
+syntax:
+array_variableName[index] = new Value
+*/
+
+employeeList[0] = {
+    name: "karthick",
+    id : 201
+}
+
+console.log(employeeList);
+
+/*
+Add a new value into Array
+syntax:
+1) To insert a new value at bottom of an Array 
+
+array_variableName.push(value);
+
+2) To insert a new value at top of an Array 
+
+array_variableName.unshift(value);
+*/
+
+employeeList.push({ 
+    name: "zyan",
+    id: 305
+});
+
+employeeList.unshift({
+    name: "arun",
+    id: 1
+});
+
+console.log(employeeList)
