@@ -668,3 +668,88 @@ employeeList.unshift({
 });
 
 console.log(employeeList)
+
+/*
+Deleting a particular value from Array
+
+array_variableName.splice(index, numberOfDeleteCount);
+
+numberOfDeleteCount - How many record you want to delete?
+*/
+
+var indexNumber = employeeList.findIndex(function(value){
+    return value.name === "osdf"
+});
+
+employeeList.splice(indexNumber, 1);
+
+console.log(employeeList);
+
+/*
+Operations in String 
+1. Convert a text value to Upper case 
+
+string_variableName.toUpperCase();
+*/
+
+var textValue = "Fox Is Red In Color";
+
+console.log(textValue.toUpperCase());
+
+/*
+2. Convert a text value to Lower case
+
+sting_variableName.toLowerCase();
+*/
+console.log(textValue.toLowerCase());
+
+/*
+To Combine Two or more Text
+1. Using plus operator 
+2. Using concat inbuilt method 
+3. Using Template String - part of ES6
+*/
+/*
+1. Using plus operator
+"string_value" + "string_value*/
+
+var message = "Hello" + " " + "Good" + " " + "Day";
+console.log(message);
+
+/*
+2. Using concat inbuilt method 
+string_variableName_1.concat(string_variableName_2)
+*/
+
+var textOne = "How are you";
+var textTwo = "I'm Good";
+var textThree = textOne.concat(" ").concat(textTwo);
+console.log(textThree);
+/*
+3. Using Template String
+`${string_variable_1} any text ${string_variable_2}`
+*/
+
+var newText = `${textOne} i can type anything ${textTwo}`;
+console.log(newText);
+
+/*
+String Replacement 
+string_variableName.replace(existingText, modifyText); - It will replace the first occurance
+string_variableName.replaceAll(existingText, modifyText); - It will replace all the occurance
+*/
+var welcomeNote = "Hi, good to see you, Hi my name is fox. Hi thank you";
+
+var updatedWelcomeNote = welcomeNote.replaceAll("Hi", "Hello Everyone");
+console.log(updatedWelcomeNote);
+
+/*
+Naming Convention:
+1. Pascel Case - RedFoxTail (First character in each word should be in Capital letter) - Used in creating Class name
+
+2. Camel Case - redFoxTail (First word will be in lower case, upcoming word First letter be in Capital letter) - used in creating variable & function name 
+
+3. Snake Case - red_fox_tail (All words will be in lower case, it will be seperated by underscore) - used in creating CSS name 
+
+4. Kebab Case - red-fox-tail (All words will be in lower case, it will be seperated by Hypen) - used in creating css name. 
+*/
