@@ -753,3 +753,56 @@ Naming Convention:
 
 4. Kebab Case - red-fox-tail (All words will be in lower case, it will be seperated by Hypen) - used in creating css name. 
 */
+
+/*
+Website - Static Content - HTML/CSS/JS
+Web Application / Web Apps - Dynamic Content - HTML/CSS/JS/React JS
+
+
+To Install React JS in a System 
+pre-request software:
+Node JS 
+
+To create a new project using React JS
+Mac OS:
+sudo npm install -g create-react-app
+sudo create-react-app ApplicationName
+
+Windows:
+npx create-react-app ApplicationName 
+
+ApplicationName - What is the name of application are we going to create 
+
+Software version 3 digits - v20.5.8 (version, major, minor, patch)
+LTS - Long Term Support 
+
+
+ES5: 
+To create a variable 
+var variableName = value;
+
+To create a function 
+function functionName(){
+
+}
+
+ES6:
+To create a variable 
+let variableName = value; changeable value
+const variableName = value; contstant value 
+
+To create a function 
+const functionName = () => {
+
+}
+
+New Features:
+import - we can able to load a javascript file into another javascript file 
+syntax:
+import FunctionName from "path of the javascript file"
+
+export - we can able to expose our javascript file to another javascript file
+syntax:
+export default ComponentName
+
+*/
