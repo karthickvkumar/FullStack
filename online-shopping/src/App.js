@@ -1,13 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import HeaderComponent from './components/header';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SettingsPage from './pages/settings';
+import ContactPage from './pages/contact';
+import HomePage from './pages/home';
+import "./css/style.css";
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h2>Online Shopping Application</h2>
-      <HeaderComponent></HeaderComponent>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="main" element={<HomePage></HomePage>}></Route>
+        <Route path="info" element={<SettingsPage></SettingsPage>}></Route>
+        <Route path="reach-us" element={<ContactPage></ContactPage>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
