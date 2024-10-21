@@ -5,6 +5,7 @@ import ContactPage from './pages/contact';
 import HomePage from './pages/home';
 import "./css/style.css";
 import PageNotFoundPage from './pages/page-not-found';
+import LoginPage from './pages/login';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="main" element={<HomePage></HomePage>}></Route>
         <Route path="info" element={<SettingsPage></SettingsPage>}></Route>
         <Route path="reach-us" element={<ContactPage></ContactPage>}></Route>
+        <Route path="" element={<LoginPage></LoginPage>}></Route>
         
         <Route path="*" element={<PageNotFoundPage></PageNotFoundPage>}></Route>
       </Routes>

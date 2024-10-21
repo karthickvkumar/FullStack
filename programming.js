@@ -752,9 +752,9 @@ Naming Convention:
 3. Snake Case - red_fox_tail (All words will be in lower case, it will be seperated by underscore) - used in creating CSS name 
 
 4. Kebab Case - red-fox-tail (All words will be in lower case, it will be seperated by Hypen) - used in creating css name. 
-*/
 
-/*
+
+
 Website - Static Content - HTML/CSS/JS
 Web Application / Web Apps - Dynamic Content - HTML/CSS/JS/React JS
 
@@ -803,6 +803,22 @@ import FunctionName from "path of the javascript file"
 
 export - we can able to expose our javascript file to another javascript file
 syntax:
-export default ComponentName
+export default 
+
+Ternary Operator - Alternative for if/else but statement 1 & 2 should have one line of code
+syntax:
+condition ? statement 1 : statement 2
+
+
+if(true){
+    statement 1  -- one line code
+}
+else{
+    statement 2 -- one line code
+}
 
 */
+
+State Management - Controlling the HTML Form data 
+
+React -> useState 

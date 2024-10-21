@@ -19,3 +19,25 @@
     background-color: #283593;
     color: white;
 }
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.label{
+    font-size: 20px;
+    width: 200px;
+    display: inline-block;
+}
+
+.font-20{
+    font-size: 20px;
+}
+
+.space{
+ margin-top: 10px;
+}
