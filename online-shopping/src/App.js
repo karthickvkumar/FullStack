@@ -6,6 +6,7 @@ import HomePage from './pages/home';
 import "./css/style.css";
 import PageNotFoundPage from './pages/page-not-found';
 import LoginPage from './pages/login';
+import "./css/contact.css";
 
 const App = () => {
   return (
