@@ -7,6 +7,8 @@ import "./css/style.css";
 import PageNotFoundPage from './pages/page-not-found';
 import LoginPage from './pages/login';
 import "./css/contact.css";
+import ContactShortCutPage from './pages/contact-shortcut';
+import RegisterPage from './pages/register';
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="info" element={<SettingsPage></SettingsPage>}></Route>
         <Route path="reach-us" element={<ContactPage></ContactPage>}></Route>
         <Route path="" element={<LoginPage></LoginPage>}></Route>
+        <Route path="contact" element={<ContactShortCutPage></ContactShortCutPage>}></Route>
+        <Route path="register" element={<RegisterPage></RegisterPage>}></Route>
         
         <Route path="*" element={<PageNotFoundPage></PageNotFoundPage>}></Route>
       </Routes>
