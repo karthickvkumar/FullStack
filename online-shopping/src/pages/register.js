@@ -9,13 +9,27 @@ const RegisterPage = () => {
         password : "",
         dateOfBirth : "",
         gender: "",
-        hobbies: "",
+        hobbies: [],
         qualification: "",
         address: ""
     });
 
     const copyInputField = (event) => {
-        updateRegisterFrom({...registerForm, [event.target.id] : event.target.value });
+        if(event.target.id === "hobbies"){
+            if(event.target.checked){
+                registerForm.hobbies.push(event.target.value);
+            }
+            else{
+                const index = registerForm.hobbies.findIndex((value) => {
+                    return value === event.target.value
+                });
+
+                registerForm.hobbies.splice(index, 1);
+            }
+        }
+        else{
+            updateRegisterFrom({...registerForm, [event.target.id] : event.target.value });
+        }
     }
 
     const registerAction = () => {
