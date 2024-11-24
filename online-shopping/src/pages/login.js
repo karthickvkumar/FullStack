@@ -8,6 +8,7 @@ const LoginPage = () => {
 
     const [email, readEmail] = useState("");
     const [password, readPassword] = useState("");
+    const [passwordVisiblity, setPasswordVisiblity] = useState(true);
 
     const copyEmail = (event) => {
         // console.log(event.target.value);
@@ -35,6 +36,14 @@ const LoginPage = () => {
         updateMessage("Good day!"); // updating dynamic variable
     }
 
+    const showPassword = () => {
+        setPasswordVisiblity(false);
+    }
+
+    const hidePassword = () => {
+        setPasswordVisiblity(true);
+    }
+
     return(
         <div className="login-form">
             <h1>Login page</h1>
@@ -46,7 +55,14 @@ const LoginPage = () => {
             </div>
             <div className="space">
                 <label className="label">Enter your Password :</label>
-                <input type="password" onChange={copyPassword} className="font-20" placeholder="Enter your Password"/>
+                <input type={passwordVisiblity ? "password" : "text"} onChange={copyPassword} className="font-20" placeholder="Enter your Password"/>
+                {
+                    passwordVisiblity ? 
+                    <img src={require("../images/eye-close.png")} onClick={() => showPassword()} className="eye-icon"/>
+                    :
+                    <img src={require("../images/eye-open.png")} onClick={() => hidePassword()} className="eye-icon"/>
+                }
+
             </div>
             <h3>The user email id - {email}</h3>
             <h3>The user password - {password}</h3>

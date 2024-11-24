@@ -41,3 +41,7 @@
 .space{
  margin-top: 10px;
 }
+
+.eye-icon{
+    cursor: pointer;
+}
