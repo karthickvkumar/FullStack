@@ -1,77 +1,49 @@
 import React, {useState} from "react";
+import axios from "axios";
+import {useNavigate} from "react-router-dom"; 
 
 const LoginPage = () => {
-    // syntax of how to consume the useState 
-    // const [variableName, functionName] = useState(initialState);
-    let textMessage = "Hello";  // Static variable
-    const [message, updateMessage] = useState("Hello"); // Dynamic Variable
+ 
+    const [loginForm, updateLoginForm] = useState({
+        email : "",
+        password : ""
+    }) 
 
-    const [email, readEmail] = useState("");
-    const [password, readPassword] = useState("");
-    const [passwordVisiblity, setPasswordVisiblity] = useState(true);
+    const navigate = useNavigate();
 
-    const copyEmail = (event) => {
-        // console.log(event.target.value);
-
-        readEmail(event.target.value);
-        // console.log("User is typing Email");
+    const handleInputField = (event) => {
+        updateLoginForm({...loginForm, [event.target.id] : event.target.value });
     }
 
-    const copyPassword = (event) => {
-        // console.log(event.target.value);
-
-        readPassword(event.target.value);
-        // console.log("User is typing Password");
-    }
-    
-    const loginAction = () => {
-        console.log(email, password);
-    }
-
-    const modifyTextMessage = () => {
-        // alert("Its working");
-        textMessage = "Good day!"; // updating static variable
-
-        //functionName(new Value);
-        updateMessage("Good day!"); // updating dynamic variable
-    }
-
-    const showPassword = () => {
-        setPasswordVisiblity(false);
-    }
-
-    const hidePassword = () => {
-        setPasswordVisiblity(true);
+    const submitLoginForm = () => {
+        // console.log(loginForm);
+        const url = "https://reqres.in/api/login";
+        axios.post(url, loginForm)
+            .then((response) => {
+                const incomingData = response.data;
+                console.log(incomingData);
+                navigate("/main");
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("Invalid email or password");
+            })
     }
 
     return(
         <div className="login-form">
             <h1>Login page</h1>
-            {/* <h2>Dynamic variable -- {message}</h2>
-            <h2>Staic variable --  {textMessage}</h2> */}
             <div>
                 <label className="label">Enter your Email :</label>
-                <input type="text" onChange={copyEmail} className="font-20" placeholder="Enter your Email" />
+                <input type="text" id="email" onChange={handleInputField} className="font-20" placeholder="Enter your Email" />
             </div>
             <div className="space">
                 <label className="label">Enter your Password :</label>
-                <input type={passwordVisiblity ? "password" : "text"} onChange={copyPassword} className="font-20" placeholder="Enter your Password"/>
-                {
-                    passwordVisiblity ? 
-                    <img src={require("../images/eye-close.png")} onClick={() => showPassword()} className="eye-icon"/>
-                    :
-                    <img src={require("../images/eye-open.png")} onClick={() => hidePassword()} className="eye-icon"/>
-                }
-
+                <input type="password" id="password" onChange={handleInputField} className="font-20" placeholder="Enter your Email" />
             </div>
-            <h3>The user email id - {email}</h3>
-            <h3>The user password - {password}</h3>
             <div className="space">
-                <button className="font-20" onClick={() => loginAction()}>Login</button>
+                <button onClick={() => submitLoginForm()}>Login</button>
             </div>
-            {/* <div className="space">
-                <button onClick={() => modifyTextMessage()}>Modify Text Message</button>
-            </div> */}
         </div>
     )
 }
