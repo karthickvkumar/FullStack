@@ -1,0 +1,25 @@
+HTML, CSS, JavaScript and React JS --- Front End Technologies (show the content)
+Node Js, MySql Database --- Backend Technologies (content will be saved)
+
+Front End (Device used to view the browser applicaiton)
+Mobile, Laptop, Tab (website will be displayed) 
+    |
+    |
+    | API (Application Programming Interface)
+    |   It will act a communication layer between a Front End & Backend application
+    |   It will look like a URL - Uniform Resource Locator
+    | REST API (REpresentational State Transfer API) - Best for Browser Apps
+    | 4 Methods in REST API -- GET, POST, PUT, DELETE
+    | Information will exchanged in JSON fomat (JavaScript Object Notation)
+    |
+    |
+Backend application will be running in a server (it can be anywhere)
+
+4 Methods in REST API:
+1. GET - To load/retrive a content from Server 
+2. POST - To submit/pass a conent to Server
+3. PUT - To update/modify a conent on the server
+4. DELETE - To clear/delete a content from the server
+
+
+

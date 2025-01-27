@@ -9,6 +9,7 @@ import LoginPage from './pages/login';
 import "./css/contact.css";
 import ContactShortCutPage from './pages/contact-shortcut';
 import RegisterPage from './pages/register';
+import InformationPage from './pages/information';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="" element={<LoginPage></LoginPage>}></Route>
         <Route path="contact" element={<ContactShortCutPage></ContactShortCutPage>}></Route>
         <Route path="register" element={<RegisterPage></RegisterPage>}></Route>
+        <Route path="api" element={<InformationPage></InformationPage>}></Route>
         
         <Route path="*" element={<PageNotFoundPage></PageNotFoundPage>}></Route>
       </Routes>

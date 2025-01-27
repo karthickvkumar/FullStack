@@ -73,3 +73,17 @@
     background-color: #04AA6D;
     color: white;
   }
+
+  .table-design{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .align-section{
+    display: flex;
+    justify-content: center;
+  }
+
+  .content-box{
+    width: 50%;
+  }

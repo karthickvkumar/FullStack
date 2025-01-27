@@ -9,6 +9,8 @@ const HeaderComponent = () => {
             <NavLink to="/reach-us" className={({isActive}) => isActive ? "link highlight" : "link"}>Contact Page</NavLink>
             <NavLink to="/contact" className={({isActive}) => isActive ? "link highlight" : "link"}>Contact ShortCut</NavLink>
             <NavLink to="/register" className={({isActive}) => isActive ? "link highlight" : "link"}>Register Page</NavLink>
+
+            <NavLink to="/api" className={({isActive}) => isActive ? "link highlight" : "link"}>API Page</NavLink>
         </div>
     )
 }
